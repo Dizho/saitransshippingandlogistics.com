@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAITRANS SHIPPING</title>
+    <meta name="description.."
+        content="SAITRANS SHIPPING - Premier Ship Agency, Stevedoring, and Offshore Logistics Services.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quality-modern.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<style>
+    @media (max-width: 768px) {
+
+        /* 🔹 Container padding */
+        .container {
+            padding: 0 15px;
+        }
+
+        /* 🔹 Navbar */
+        .nav-menu {
+            position: absolute;
+            top: 70px;
+            left: -100%;
+            width: 100%;
+            background: #fff;
+            flex-direction: column;
+            text-align: center;
+            transition: 0.3s;
+            padding: 20px 0;
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .menu-toggle {
+            display: block;
+            cursor: pointer;
+        }
+
+        /* 🔹 Logo */
+        .logo-text {
+            font-size: 14px;
+        }
+
+        .logo-img {
+            width: 40px;
+        }
+
+        /* 🔹 Hero Section */
+        .hero-content h1 {
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+        .hero-content p {
+            font-size: 14px;
+        }
+
+        /* 🔹 About Section */
+        .about-modern-wrapper {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .about-image-column img {
+            width: 100%;
+        }
+
+        /* 🔹 Agency Section */
+        .agency-content-wrapper {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .services-box {
+            width: 100%;
+        }
+
+        /* 🔹 Quality Section */
+        .quality-modern-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* 🔹 Locations Top Row */
+        .locations-top-row {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 🔹 Location Cards */
+        .location-card {
+            width: 100%;
+        }
+
+        /* 🔹 Small Location Grid */
+        .locations-grid-small {
+            grid-template-columns: 1fr !important;
+        }
+
+        /* 🔹 Contact Card */
+        .industrial-contact-card {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .industrial-right {
+            width: 100%;
+        }
+
+        /* 🔹 Mobile Numbers Wrap properly */
+        .mobile-row {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* 🔹 Email overflow fix */
+        .c-link {
+            white-space: normal;
+            word-break: break-word;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .hero-content h1 {
+            font-size: 22px;
+        }
+
+        .hero-content p {
+            font-size: 13px;
+        }
+
+        .cta-button {
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+        }
+
+        .card-header h4 {
+            font-size: 16px;
+        }
+
+        .small-contact {
+            font-size: 13px;
+        }
+    }
+
+    .c-link {
+        display: inline-flex;
+        /* 🔥 change from flex → inline-flex */
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        width: 100%;
+        /* ensure full width */
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-details a[href^="mailto"] {
+        line-height: 1.2;
+        margin-bottom: -5px;
+    }
+
+    .mobile-row {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        /* space between numbers */
+        white-space: nowrap;
+    }
+
+    .mobile-row i {
+        margin-right: 5px;
+    }
+
+    .mobile-row a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .locations-grid-small {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 equal columns */
+        gap: 20px;
+        width: 100%;
+    }
+
+    .location-card.mini {
+        width: 100%;
+    }
+
+    @media (max-width: 576px) {
+
+        .locations-grid-small {
+            grid-template-columns: 1fr;
+        }
+
+        .location-card.mini {
+            text-align: center;
+            /* 🔥 center all text */
+        }
+
+        .location-card.mini .card-header {
+            justify-content: center;
+            /* 🔥 center icon + title */
+        }
+
+        .location-card.mini p {
+            text-align: center;
+        }
+
+        .location-card.mini .small-contact {
+            display: inline-block;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/images/Stsl_circle_logo.png" alt="SAITRANS SHIPPING" class="logo-img">
+                <span class="logo-text">SAITRANS SHIPPING<br>AND LOGISTICS</span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Company Profile</a></li>
+                <li><a href="#agency">Shipping Agency</a></li>
+                <li><a href="#quality">Quality</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#contact" class="nav-btn">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-slider">
+        <div class="slides-container">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: url('assets/images/hero_shipping_logistics_1.png');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content fade-in-up">
+                    <h1>Global Maritime <br> Logistics Partner</h1>
+                    <p>Providing efficient and cost-effective shipping services </p>
+                    <div class="btn-group">
+                        <a href="#contact" class="cta-button">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('assets/images/hero_vessel_at_sea.png');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Connecting Ports <br> Worldwide</h1>
+                    <p>Ship Agency • Stevedoring • Offshore Support</p>
+                    <div class="btn-group">
+                        <a href="#locations" class="cta-button">View Locations</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('assets/images/Vertical_Lift.jpg');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Commitment to <br> Excellence</h1>
+                    <p>Transparency, trust, and continuous improvement</p>
+                    <div class="btn-group">
+                        <a href="#quality" class="cta-button">Quality Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="slider-dots">
+            <div class="dot active" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+        </div>
+    </section>
+
+    <!-- Company Profile (About) -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="badge">Who We Are</span>
+                <h2>Company Profile</h2>
+            </div>
+
+            <div class="about-modern-wrapper">
+                <!-- Image Column -->
+                <div class="about-image-column fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/Oil_Tanker.png" alt="SAITRANS Logistics Team">
+                        <div class="image-accent-box"></div>
+                    </div>
+                </div>
+
+                <!-- Text Column -->
+                <div class="about-text-column fade-in-left">
+                    <div class="about-card">
+                        <p class="lead-text">
+                            <strong>SAITRANS SHIPPING</strong> is a premier conglomerate offering comprehensive Shipping
+                            Services, including Ship Agency, Stevedoring, Oil & Gas Support, and Logistics.
+                        </p>
+                        <p>
+                            Driven by professionals with vast experience, we focus on delivering efficient,
+                            cost-effective solutions without ever compromising on quality. We believe transparency is
+                            the key to trust, working diligently with our clients through open and honest
+                            communication.
+                        </p>
+
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>Global Reach</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-handshake"></i>
+                                <span>Trusted & Transparent</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-stopwatch"></i>
+                                <span>Time-Efficient</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-coins"></i>
+                                <span>Cost-Effective</span>
+                            </div>
+                        </div>
+
+                        <p class="mt-4">
+                            We understand that time and cost are of utmost importance. Hence, we strive to custom-tailor
+                            our services to your needs, leaving you free to concentrate on your core competencies while
+                            we handle the logistics.
+                        </p>
+
+                        <div class="btn-group left-align mt-4">
+                            <a href="#contact" class="cta-button">Partner With Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Agency Section -->
+    <section id="agency" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="badge">Expertise</span>
+                <h2>Shipping Agency</h2>
+            </div>
+
+            <div class="agency-content-wrapper">
+                <div class="agency-text fade-in-up">
+                    <p>
+                        With vast experienced professionals, SAITRANS SHIPPING has the capacity to provide Ship Agency
+                        services and currently
+                        providing at Chennai, Ennore, Kattupalli, Tuticorin & Karaikal ports and expanding very soon to
+                        all Indian ports.
+                        We aim to provide cost-effective quality services, without compromising on key
+                        resources to Our Clients include
+                        Ship Owners, Operators, Managers/Charterers and Traders.
+                    </p>
+                    <p>
+                        Our diligently trained and experienced personnel have the capacity to handle all operations
+                        swiftly and efficiently, thereby
+                        ensuring cost-effective services in the best interest of the client.
+                    </p>
+                    <p>
+                        Apart from this, we understand the importance of interpersonal relations in this industry.
+                        Therefore, we are conscientious in
+                        maintaining regular and optimum relations with the Port and other Government Authorities. We
+                        work towards facilitating
+                        good relations between the overseas shipowners/traders and the local shippers/receivers. Our
+                        priority is to build strong and
+                        long-lasting relations with our Clients. We strive to keep our clients updated with all the
+                        relevant information regarding their
+                        shipments.
+                    </p>
+                    <div class="expandable-text">
+                        <p>
+                            All essential information is given to the client before the arrival of the vessel and the
+                            client is also informed about the daily
+                            progress of the vessel until its departure. Thus, Customer Satisfaction is a priority to us.
+                        </p>
+                        <p>
+                            We assure that we shall co-ordinate with the CHAs / Stevedore and as well as Logistical
+                            operators and other cargo related service
+                            providers to expedite the cargo operations so as to get the good turn-around of vessels
+                            calling under our agency enable the
+                            owners to fix further employment of the vessels as per the schedule. We shall also suggest
+                            the available cargos for back
+                            loading of the vessels calling under our agency which is most convenient to our principals
+                            by nominating us as their agents.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Services List -->
+                <div class="services-box fade-in-up delay-100">
+                    <h3>Ship Agency Services</h3>
+                    <ul class="modern-list">
+                        <li>Handling of Charterers Agency Matters</li>
+                        <li>Handling of Owners Agency Matters</li>
+                        <li>Statutory clearance of the vessels by the Customs, Port, Health, Immigration, Freight Tax
+                            Authorities</li>
+                        <li>Monitoring of Vessel loading / un-loading operations by experienced supervisors</li>
+                        <li>Owners Husbandry Matters</li>
+                        <li>Handling of Crew Changes and repatriation formalities on time</li>
+                        <li>Handling of Transit Ship Spares and delivery at onboard</li>
+                        <li>Delivery CTM arrangements</li>
+                        <li>Ship candling Services, Supply of Provisions, Ship Stores, Fresh Water, Bunkers etc.</li>
+                        <li>Arrangement of Ship Repairing services</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Important Notice -->
+            <div class="important-notice glass-effect fade-in-up delay-200">
+                <div class="notice-icon"><i class="fa-solid fa-bell"></i></div>
+                <p>
+                    Most Important is to Provide most competitive PDA by maintaining quality of services. Also closely
+                    monitoring the costs incurred during vessels' Port stay so as to minimize expenses & endeavour that
+                    the costs are below the PDA amounts approved by vessel owners.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Quality Policy Section -->
+    <!-- Quality Policy Section -->
+    <section id="quality" class="section quality-modern-bg">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="badge white">Standards</span>
+                <h2 class="text-white">Quality Policy</h2>
+            </div>
+
+            <div class="quality-modern-grid">
+                <!-- Main Statement Card -->
+                <div class="quality-glass-card fade-in-right">
+                    <div class="decoration-circle"></div>
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+
+                    <h3>Our Commitment</h3>
+
+                    <p class="highlight-text">
+                        Continuous improvement is a regular process at SAITRANS SHIPPING. We are dedicated to always
+                        learning and adopting new methods.
+                    </p>
+
+                    <div class="separator-line"></div>
+
+                    <p>
+                        Our company policy is to provide customers with <strong>high quality services</strong>, on-time
+                        delivery, and ever-improving levels of satisfaction. We focus on professionalism and strict
+                        process control.
+                    </p>
+                </div>
+
+                <!-- Objectives List -->
+                <div class="objectives-modern-wrapper fade-in-left">
+                    <h3 class="list-title">Quality Objectives</h3>
+
+                    <div class="objectives-list">
+                        <!-- Item 1 -->
+                        <div class="objective-row">
+                            <div class="obj-icon-box">
+                                <i class="fa-solid fa-gauge-high"></i>
+                            </div>
+                            <div class="obj-content">
+                                <h4>Efficient Services</h4>
+                                <p>Streamlined operations for maximum speed.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="objective-row">
+                            <div class="obj-icon-box">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div class="obj-content">
+                                <h4>Prompt Action</h4>
+                                <p>Immediate response and quick turn-arounds.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="objective-row">
+                            <div class="obj-icon-box">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                            </div>
+                            <div class="obj-content">
+                                <h4>Customer Satisfaction</h4>
+                                <p> exceeding client expectations every time.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="objective-row">
+                            <div class="obj-icon-box">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+                            <div class="obj-content">
+                                <h4>Continuous Growth</h4>
+                                <p>Constant upgrade of skills and technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Port Offices Locations -->
+    <section id="locations" class="section bg-light-gray">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="badge">Network</span>
+                <h2>Our Port Offices</h2>
+            </div>
+
+            <div class="locations-wrapper">
+                <!-- Top Row: Registered & Pamban -->
+                <div class="locations-top-row">
+                    <!-- Registered Office -->
+                    <div class="location-card featured fade-in-up">
+                        <div class="card-header">
+                            <i class="fa-solid fa-building"></i>
+                            <h4>Registered Office</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>83/171, 3rd Floor, Linghi Chetty Street, <br>
+                                George Town, Chennai - 600 001.</p>
+
+                            <div class="contact-details">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=operations@saitransshipping.com&su=Inquiry&body=Hello%2C%20I%20would%20like%20to%20know%20about%20your%20shipping%20services."
+                                    target="_blank" class="c-link">
+                                    <i class="fa-solid fa-envelope"></i> operations@saitransshipping.com
+                                </a>
+
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=karthikyeyan.s@saitransshipping.com&su=Service%20Request&body=Dear%20Sir%2C%0A%0AI%20would%20like%20to%20know%20about%20your%20services.%0A%0AThanks%20%26%20Regards"
+                                    target="_blank" class="c-link">
+                                    <i class="fa-solid fa-envelope"></i> karthikyeyan.s@saitransshipping.com
+                                </a>
+
+                                <!-- <a href="mailto:operations@saitransshipping.com?subject=Inquiry&body=Hello, I would like to know about your shipping services."
+                                    class="c-link">
+                                    <i class="fa-solid fa-envelope"></i> operations@saitransshipping.com
+                                </a> -->
+                                <!-- <a href="mailto:operations@saitransshipping.com" class="c-link"><i
+                                        class="fa-solid fa-envelope"></i> operations@saitransshipping.com</a> -->
+                                <!-- <a href="mailto:karthikyeyan.s@saitransshipping.com" class="c-link"><i
+                                        class="fa-solid fa-envelope"></i> karthikyeyan.s@saitransshipping.com</a> -->
+                                <a href="tel:04442072278" class="c-link"><i class="fa-solid fa-phone"></i> 044 -4207
+                                    2278</a>
+                                <div class="mobile-row">
+                                    <i class="fa-solid fa-mobile"></i>
+                                    <a href="tel:+919940199085">+91 9940199085</a>
+                                    <a href="tel:+919445327857">+91 9445327857</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pamban Office -->
+                    <div class="location-card featured fade-in-up delay-100">
+                        <div class="card-header">
+                            <i class="fa-solid fa-anchor"></i>
+                            <h4>Pamban Office</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                <strong>A.Ananthan Baiva</strong><br>
+                                5/3250, Valasai Street,<br>
+                                Thangachimadam, Pamban,<br>
+                                Rameswaram, Ramanathapuram - 623529.
+                            </p>
+                            <div class="contact-details">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=operations@saitransshipping.com&su=Inquiry&body=Hello%2C%20I%20would%20like%20to%20know%20about%20your%20shipping%20services."
+                                    target="_blank" class="c-link">
+                                    <i class="fa-solid fa-envelope"></i> operations@saitransshipping.com
+                                </a>
+                                <!-- <a href="mailto:operations@saitransshipping.com" class="c-link"><i
+                                        class="fa-solid fa-envelope"></i> operations@saitransshipping.com</a> -->
+                                <a href="tel:+918754750515" class="c-link"><i class="fa-solid fa-mobile"></i> +91 87547
+                                    50515</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="locations-grid-small">
+
+                    <!-- Ennore -->
+                    <div class="location-card mini fade-in-up delay-100">
+                        <div class="card-header">
+                            <i class="fa-solid fa-ship"></i>
+                            <h4>Ennore / Kattupalli</h4>
+                        </div>
+                        <p>No.18, 3rd Main Road, <br>
+                            Athipattu Pudhu Nagar, <br>
+                            Ennore - 600 120.</p>
+                        <p class="small-contact"><strong>Mobile:</strong> +91 75024 35977</p>
+                    </div>
+
+                    <!-- Tuticorin -->
+                    <div class="location-card mini fade-in-up delay-200">
+                        <div class="card-header">
+                            <i class="fa-solid fa-water"></i>
+                            <h4>Tuticorin</h4>
+                        </div>
+                        <p>No.5/258, A6, <br>
+                            Mahanagar, Muthaipuram, <br>
+                            Tuticorin - 628 005.</p>
+                        <p class="small-contact"><strong>Mobile:</strong> +91 9171672323</p>
+                    </div>
+
+                    <!-- Karaikal -->
+                    <div class="location-card mini fade-in-up delay-200">
+                        <div class="card-header">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h4>Karaikal</h4>
+                        </div>
+                        <p>No.142, Lakshmi Corner, <br>
+                            Ammalchattiram, <br>
+                            Nagore Main Road, <br>
+                            Karaikal - 609 602.</p>
+                        <p class="small-contact"><strong>Mobile:</strong> +91 9788563275</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section quality-modern-bg">
+        <div class="container">
+            <div class="industrial-contact-card fade-in-up">
+                <div class="industrial-left">
+                    <span class="badge orange-outline">Get in Touch</span>
+                    <h2>Ready to Start Your Shipment?</h2>
+                    <p>Contact our experts today for efficient and secured shipping solutions.</p>
+                </div>
+                <div class="industrial-right">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=operations@saitransshipping.com&su=Inquiry&body=Hello%2C%20I%20would%20like%20to%20know%20about%20your%20shipping%20services."
+                        target="_blank" class="industrial-btn">
+
+                        <div class="ind-icon-box">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div class="ind-text-box">
+                            <span class="action">Email Us</span>
+                            <span class="detail">operations@saitransshipping.com</span>
+                        </div>
+                    </a>
+                    <!-- <a href="mailto:operations@saitransshipping.com" class="industrial-btn">
+                        <div class="ind-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="ind-text-box">
+                            <span class="action">Email Us</span>
+                            <span class="detail">operations@saitransshipping.com</span>
+                        </div>
+                    </a> -->
+                    <a href="tel:+919940199085" class="industrial-btn">
+                        <div class="ind-icon-box"><i class="fa-solid fa-phone"></i></div>
+                        <div class="ind-text-box">
+                            <span class="action">Call Us</span>
+                            <span class="detail">+91 99401 99085</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/STSL_Logo-bg.png" alt="SAITRANS SHIPPING" class="logo-img-footer">
+                    <p>Your Trusted Partner in Global Maritime Logistics</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#agency">Services</a>
+                    <a href="#locations">Contact</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 SAITRANS SHIPPING. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
