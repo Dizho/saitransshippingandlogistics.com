@@ -53,19 +53,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAITRANS SHIPPING</title>
-    <meta name="description.."
-        content="SAITRANS SHIPPING - Premier Ship Agency, Stevedoring, and Offshore Logistics Services.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/quality-modern.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
 </head>
 
 <style>
@@ -78,7 +65,7 @@
 
         /* 🔹 Navbar */
         .nav-menu {
-            position: absolute;
+            position: fixed;
             top: 70px;
             left: -100%;
             width: 100%;
@@ -87,6 +74,8 @@
             text-align: center;
             transition: 0.3s;
             padding: 20px 0;
+            padding: 10px 0;
+            /* 🔥 reduce top-bottom space */
         }
 
         .nav-menu.active {
@@ -99,12 +88,32 @@
         }
 
         /* 🔹 Logo */
-        .logo-text {
-            font-size: 14px;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 8px;
         }
 
         .logo-img {
-            width: 40px;
+            width: 35px;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-size: clamp(12px, 3.5vw, 16px);
+            /* 🔥 responsive size */
+            font-weight: 700;
+            line-height: 1.2;
+            width: 100%;
+            white-space: normal;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: clamp(10px, 3vw, 13px);
+            font-weight: 600;
         }
 
         /* 🔹 Hero Section */
@@ -211,6 +220,163 @@
         }
     }
 
+    /* Hide menu toggle in desktop */
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+    }
+
+    /* Mobile view */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            z-index: 1001;
+        }
+
+        .menu-toggle .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: #000;
+            transition: 0.3s;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 70px;
+            left: -100%;
+            width: 100%;
+            background: #fff;
+            flex-direction: column;
+            text-align: center;
+            transition: 0.3s;
+            padding: 10px 0;
+            /* 🔥 reduce top-bottom space */
+        }
+
+        .nav-menu a {
+            color: #000 !important;
+            /* 🔥 force black */
+            text-decoration: none;
+        }
+
+        .nav-menu li {
+            margin: 8px 0;
+            /* 🔥 reduced from 15px */
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .nav-menu li a {
+            position: relative;
+            font-size: 15px;
+            padding: 5px 0;
+        }
+
+        .nav-menu li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: #ff6600;
+            transition: 0.3s;
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    /* Mobile Fix */
+    @media (max-width: 768px) {
+
+        .logo-img {
+            padding-left: 10px;
+            height: 25px;
+            /* reduced */
+        }
+
+        .logo-text {
+            font-size: clamp(12px, 3.5vw, 16px);
+            /* 🔥 responsive size */
+            font-weight: 700;
+            line-height: 1.2;
+            width: 100%;
+            white-space: normal;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: clamp(10px, 3vw, 13px);
+            font-weight: 600;
+        }
+    }
+
+    /* Default (Desktop stays same) */
+    .hero-slider {
+        height: 100vh;
+    }
+
+    @media (max-width: 768px) {
+
+        .hero-slider {
+            height: 50vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides-container {
+            height: 100%;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            /* 🔥 IMPORTANT */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-size: cover;
+            /* 🔥 fill */
+            background-position: center;
+            /* 🔥 center image */
+            background-repeat: no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide.active {
+            z-index: 2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     .c-link {
         display: inline-flex;
         /* 🔥 change from flex → inline-flex */
@@ -225,11 +391,6 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
-    }
-
-    .contact-details a[href^="mailto"] {
-        line-height: 1.2;
-        margin-bottom: -5px;
     }
 
     .mobile-row {
@@ -285,6 +446,51 @@
             display: inline-block;
             margin: 0 auto;
         }
+
+        .nav-menu li a {
+            position: relative;
+            font-size: 15px;
+            padding: 5px 0;
+        }
+
+        .nav-menu li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: #ff6600;
+            transition: 0.3s;
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            background: #0d2b45;
+            /* your dark blue */
+            color: #fff !important;
+            /* 🔥 white text */
+            padding: 10px 18px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: #ff6600;
+            color: #fff !important;
+        }
+    }
+
+    .navbar {
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-menu {
+        z-index: 1001;
     }
 </style>
 
@@ -296,6 +502,10 @@
             <a href="#" class="logo">
                 <img src="assets/images/Stsl_circle_logo.png" alt="SAITRANS SHIPPING" class="logo-img">
                 <span class="logo-text">SAITRANS SHIPPING<br>AND LOGISTICS</span>
+                <!-- <span class="logo-text">
+                    SAITRANS SHIPPING
+                    <small>AND LOGISTICS</small>
+                </span> -->
             </a>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -782,6 +992,19 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        const menu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        menu.addEventListener('click', () => {
+            console.log("clicked");  // 👈 check in console
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
