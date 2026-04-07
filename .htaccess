@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# 1. Redirect /page.html to /page (External Redirect)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# 2. Serve /page as /page.html internally (Internal Redirect)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# 3. Handle index specifically - redirect /index to root /
+RewriteRule ^index$ / [L,R=301]
