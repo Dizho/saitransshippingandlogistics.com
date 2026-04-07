@@ -5,28 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Primary SEO -->
-    <title>SAITRANS Shipping & Logistics | Ship Agency, Stevedoring & Offshore Services</title>
+    <title>Pamban Marine Services | Ship Agency, Port & Offshore Support - SAITRANS</title>
 
     <meta name="description"
-        content="SAITRANS Shipping & Logistics provides reliable ship agency, stevedoring, freight forwarding, and offshore logistics services across India. Trusted maritime solutions with excellence and efficiency.">
+        content="Leading Pamban Marine Services provider offering ship agency, port handling, vessel clearance, and offshore logistics at Pamban Channel. Trusted and reliable maritime solutions.">
 
     <meta name="keywords"
-        content="Saitrans Shipping, Shipping Company India, Ship Agency Services, Stevedoring Services, Offshore Logistics, Freight Forwarding, Port Services India, Maritime Logistics Chennai">
+        content="Pamban Marine Service, Pamban Port Service, Pamban Marine Solutions, Pamban Shipping Services, Pamban Channel Services, Vessel Operations Pamban, Marine Experts Pamban, Offshore Services Pamban, SAITRANS Shipping">
 
-    <meta name="author" content="SAITRANS Shipping & Logistics">
+    <meta name="author" content="Pamban Marine Services | Ship Agency, Port & Offshore Support - SAITRANS">
 
     <!-- Robots -->
     <meta name="robots" content="index, follow">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://saitransshippingandlogistics.com/">
+    <link rel="canonical" href="https://saitransshippingandlogistics.com/pamban-marine-services">
 
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="SAITRANS Shipping & Logistics">
+    <meta property="og:title" content="Pamban Marine Services Excellence - SAITRANS">
     <meta property="og:description"
-        content="Expert ship agency, stevedoring, and offshore logistics services in India. Reliable and efficient maritime solutions.">
-    <meta property="og:url" content="https://saitransshippingandlogistics.com/">
+        content="Trusted Pamban Marine Services including ship agency, vessel operations, and port support at Pamban Channel.">
+    <meta property="og:url" content="https://saitransshippingandlogistics.com/pamban-marine-services">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://saitransshippingandlogistics.com/images/logo.png">
 
@@ -163,10 +161,7 @@
             width: 100%;
         }
 
-        /* 🔹 Small Location Grid */
-        .locations-grid-small {
-            grid-template-columns: 1fr !important;
-        }
+
 
         /* 🔹 Contact Card */
         .industrial-contact-card {
@@ -294,6 +289,32 @@
 
     }
 
+    .locations-top-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .location-card {
+        max-width: 650px;
+        width: 100%;
+    }
+
+    .locations-top-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .location-card {
+        max-width: 650px;
+        width: 100%;
+    }
+
     .logo {
         display: flex;
         align-items: center;
@@ -410,42 +431,10 @@
         text-decoration: none;
     }
 
-    .locations-grid-small {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /* 3 equal columns */
-        gap: 20px;
-        width: 100%;
-    }
 
-    .location-card.mini {
-        width: 100%;
-    }
+
 
     @media (max-width: 576px) {
-
-        .locations-grid-small {
-            grid-template-columns: 1fr;
-        }
-
-        .location-card.mini {
-            text-align: center;
-            /* 🔥 center all text */
-        }
-
-        .location-card.mini .card-header {
-            justify-content: center;
-            /* 🔥 center icon + title */
-        }
-
-        .location-card.mini p {
-            text-align: center;
-        }
-
-        .location-card.mini .small-contact {
-            display: inline-block;
-            margin: 0 auto;
-        }
 
         .nav-menu li a {
             position: relative;
@@ -492,6 +481,106 @@
     .nav-menu {
         z-index: 1001;
     }
+
+    section:target {
+        animation: highlight 1s ease;
+    }
+
+    @keyframes highlight {
+        from {
+            background-color: #fff3cd;
+        }
+
+        to {
+            background-color: transparent;
+        }
+    }
+
+    /* 🔥 Fix all service images same size */
+    .about-image-column {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .about-image-column img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Optional: wrapper consistency */
+    .image-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .pamban-services .agency-text {
+        flex: 1;
+        max-width: 820px;
+    }
+
+    .pamban-services .about-image-column {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .pamban-services .agency-text h2 {
+        font-size: 26px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: #1a2b3c;
+    }
+
+    .pamban-services .agency-text p {
+        font-size: 15.5px;
+        line-height: 1.8;
+        color: #5a6b7b;
+        margin-bottom: 15px;
+    }
+
+    .pamban-services .section {
+        padding: 60px 0;
+    }
+
+    .pamban-services .agency-content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    /* 🔥 Mobile layout fix */
+    @media (max-width: 768px) {
+
+        .pamban-services .agency-content-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Order: h2 first */
+        .pamban-services .agency-text {
+            order: 1;
+            width: 100%;
+        }
+
+        /* Image second */
+        .pamban-services .about-image-column {
+            order: 2;
+            width: 100%;
+        }
+
+        /* Paragraph spacing */
+        .pamban-services .agency-text p {
+            order: 3;
+        }
+
+        /* Optional spacing */
+        .pamban-services .about-image-column {
+            margin: 15px 0;
+        }
+    }
 </style>
 
 <body>
@@ -502,10 +591,7 @@
             <a href="#" class="logo">
                 <img src="assets/images/Stsl_circle_logo.png" alt="SAITRANS SHIPPING" class="logo-img">
                 <span class="logo-text">SAITRANS SHIPPING<br>AND LOGISTICS</span>
-                <!-- <span class="logo-text">
-                    SAITRANS SHIPPING
-                    <small>AND LOGISTICS</small>
-                </span> -->
+
             </a>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -513,10 +599,10 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#about">Company Profile</a></li>
                 <li><a href="#agency">Shipping Agency</a></li>
-                <li><a href="pamban.html" title="Explore Pamban Marine Services">Explore Services</a></li>
+                <li><a href="#pamban-services" title="Explore Pamban Marine Services">Explore Services</a></li>
                 <li><a href="#quality">Quality</a></li>
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#contact" class="nav-btn">Contact Us</a></li>
@@ -528,7 +614,22 @@
     <section id="home" class="hero-slider">
         <div class="slides-container">
             <!-- Slide 1 -->
-            <div class="slide active" style="background-image: url('assets/images/hero_shipping_logistics_1.png');">
+            <div class="slide active" style="background-image: url('assets/images/pamban_Lift_bridge.jpg');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content fade-in-up">
+                    <h1>Pamban Service Agency</h1>
+                    <p>
+                        Reliable marine solutions at Pamban including pilot service, port clearance,
+                        towing assistance, and bunkering — ensuring safe, efficient, and timely vessel operations.
+                    </p>
+                    <div class="btn-group">
+                        <a href="#pamban-services" class="cta-button">Explore Services</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('assets/images/hero_shipping_logistics_1.png');">
                 <div class="hero-overlay"></div>
                 <div class="hero-content fade-in-up">
                     <h1>Global Maritime <br> Logistics Partner</h1>
@@ -538,7 +639,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Slide 2 -->
+
+            <!-- Slide 3 -->
             <div class="slide" style="background-image: url('assets/images/hero_vessel_at_sea.png');">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
@@ -549,7 +651,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Slide 3 -->
+
+            <!-- Slide 4 -->
             <div class="slide" style="background-image: url('assets/images/Vertical_Lift.jpg');">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
@@ -570,6 +673,7 @@
             <div class="dot active" data-slide="0"></div>
             <div class="dot" data-slide="1"></div>
             <div class="dot" data-slide="2"></div>
+            <div class="dot" data-slide="3"></div>
         </div>
     </section>
 
@@ -643,77 +747,105 @@
         <div class="container">
             <div class="section-header fade-in">
                 <span class="badge">Expertise</span>
-                <h2>Shipping Agency</h2>
+                <h2>Pamban Shipping Agency</h2>
             </div>
 
             <div class="agency-content-wrapper">
+
                 <div class="agency-text fade-in-up">
                     <p>
-                        With vast experienced professionals, SAITRANS SHIPPING has the capacity to provide Ship Agency
-                        services and currently
-                        providing at Chennai, Ennore, Kattupalli, Tuticorin & Karaikal ports and expanding very soon to
-                        all Indian ports.
-                        We aim to provide cost-effective quality services, without compromising on key
-                        resources to Our Clients include
-                        Ship Owners, Operators, Managers/Charterers and Traders.
+                        With strong local expertise and experienced marine professionals, SAITRANS SHIPPING provides
+                        specialized Ship Agency and marine support services at Pamban, a critical and sensitive coastal
+                        navigation zone. Our operations are focused on ensuring safe vessel passage through the narrow
+                        Pamban channel while maintaining the highest standards of efficiency and compliance.
+                        We cater to Ship Owners, Operators, Charterers, and Traders by delivering reliable and
+                        cost-effective solutions tailored to the unique requirements of coastal and shallow water
+                        operations.
                     </p>
+
                     <p>
-                        Our diligently trained and experienced personnel have the capacity to handle all operations
-                        swiftly and efficiently, thereby
-                        ensuring cost-effective services in the best interest of the client.
+                        Our team is well-equipped to handle essential services such as Pilot Service, Port Clearance,
+                        Towing Support, Water and Diesel Bunkering, and Provisions supply with precision and timeliness.
+                        We ensure that every vessel movement is supported with proper planning, coordination, and
+                        execution,
+                        minimizing delays and operational risks. Our strong coordination with Port Authorities, Customs,
+                        Marine Departments, and other regulatory bodies enables smooth and hassle-free vessel
+                        operations.
                     </p>
+
                     <p>
-                        Apart from this, we understand the importance of interpersonal relations in this industry.
-                        Therefore, we are conscientious in
-                        maintaining regular and optimum relations with the Port and other Government Authorities. We
-                        work towards facilitating
-                        good relations between the overseas shipowners/traders and the local shippers/receivers. Our
-                        priority is to build strong and
-                        long-lasting relations with our Clients. We strive to keep our clients updated with all the
-                        relevant information regarding their
-                        shipments.
+                        Understanding the operational challenges in Pamban waters, we prioritize safety, communication,
+                        and real-time monitoring of vessel movements. We maintain continuous updates with our clients,
+                        ensuring transparency at every stage from vessel arrival to departure. Our commitment is to
+                        deliver seamless services while optimizing turnaround time and operational costs.
                     </p>
+
                     <div class="expandable-text">
                         <p>
-                            All essential information is given to the client before the arrival of the vessel and the
-                            client is also informed about the daily
-                            progress of the vessel until its departure. Thus, Customer Satisfaction is a priority to us.
+                            We ensure that all necessary arrangements including pilot boarding, towing assistance,
+                            bunkering supplies, and documentation are completed efficiently before vessel transit.
+                            Daily updates and operational reports are shared with clients to maintain clarity and trust.
+                            Customer satisfaction and operational excellence remain our top priorities.
                         </p>
+
                         <p>
-                            We assure that we shall co-ordinate with the CHAs / Stevedore and as well as Logistical
-                            operators and other cargo related service
-                            providers to expedite the cargo operations so as to get the good turn-around of vessels
-                            calling under our agency enable the
-                            owners to fix further employment of the vessels as per the schedule. We shall also suggest
-                            the available cargos for back
-                            loading of the vessels calling under our agency which is most convenient to our principals
-                            by nominating us as their agents.
+                            Our team also coordinates closely with logistics providers and marine service operators to
+                            ensure smooth execution of all supporting activities. By combining local knowledge with
+                            professional expertise, we provide dependable marine solutions that help vessel owners and
+                            operators achieve safe navigation and timely operations in the Pamban region.
                         </p>
                     </div>
                 </div>
 
                 <!-- Services List -->
                 <div class="services-box fade-in-up delay-100">
-                    <h3>Ship Agency Services</h3>
+                    <h3>Pamban Ship Agency Services</h3>
                     <ul class="modern-list">
-                        <li>Handling of Charterers Agency Matters</li>
-                        <li>Handling of Owners Agency Matters</li>
-                        <li>Statutory clearance of the vessels by the Customs, Port, Health, Immigration, Freight Tax
-                            Authorities</li>
-                        <li>Monitoring of Vessel loading / un-loading operations by experienced supervisors</li>
-                        <li>Owners Husbandry Matters</li>
-                        <li>Handling of Crew Changes and repatriation formalities on time</li>
-                        <li>Handling of Transit Ship Spares and delivery at onboard</li>
-                        <li>Delivery CTM arrangements</li>
-                        <li>Ship candling Services, Supply of Provisions, Ship Stores, Fresh Water, Bunkers etc.</li>
-                        <li>Arrangement of Ship Repairing services</li>
+
+                        <li>
+                            <a href="#pilot-service">
+                                <strong>Pilot Service</strong><br></a>
+                            Safe navigation through Pamban channel with experienced pilots.
+
+                        </li>
+
+                        <li>
+                            <a href="#port-clearance">
+                                <strong>Port Clearance</strong><br></a>
+                            Complete handling of vessel documentation and approvals.
+                        </li>
+
+                        <li>
+                            <a href="#towing-service">
+                                <strong>Towing Supporting Boat</strong><br></a>
+                            Assistance for vessel movement in shallow waters.
+                        </li>
+
+                        <li>
+                            <a href="#water-bunkering">
+                                <strong>Water Bunkering</strong><br></a>
+                            Fresh water supply to vessels.
+                        </li>
+
+                        <li>
+                            <a href="#diesel-bunkering">
+                                <strong>Diesel Bunkering</strong><br></a>
+                            Reliable marine fuel supply.
+                        </li>
+
+                        <li>
+                            <a href="#provisions">
+                                <strong>Provisions</strong><br></a>
+                            Supply of food and essential items for crew.
+                        </li>
+
                     </ul>
                 </div>
             </div>
 
             <!-- Important Notice -->
             <div class="important-notice glass-effect fade-in-up delay-200">
-                <div class="notice-icon"><i class="fa-solid fa-bell"></i></div>
+                <div class="notice-icon"></div>
                 <p>
                     Most Important is to Provide most competitive PDA by maintaining quality of services. Also closely
                     monitoring the costs incurred during vessels' Port stay so as to minimize expenses & endeavour that
@@ -724,7 +856,175 @@
         </div>
     </section>
 
-    <!-- Quality Policy Section -->
+
+    <div id="pamban-services" class="pamban-services">
+        <section id="pilot-service" class="section">
+            <div class="section-header fade-in">
+                <span class="badge">Expertise</span>
+                <h2>Pamban Shipping Agency</h2>
+            </div>
+            <div class="container agency-content-wrapper">
+
+
+                <div class="about-image-column fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/Pamban-Rail-Bridge.jpg" alt="Pilot Service">
+                        <div class="image-accent-box"></div>
+                    </div>
+                </div>
+
+                <div class="agency-text">
+                    <h2>Pilot Service</h2>
+                    <p>
+                        Navigating through the Pamban channel requires precise expertise due to its narrow width,
+                        shallow depth, and continuous tidal variations. SAITRANS SHIPPING provides experienced
+                        and certified marine pilots who ensure safe and controlled vessel movement through this
+                        critical stretch.
+                    </p>
+                    <p>
+                        Our pilots possess in-depth local knowledge of the channel, enabling them to guide vessels
+                        efficiently while minimizing navigational risks. We ensure proper coordination with port
+                        authorities and bridge operations to maintain smooth transit schedules.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="port-clearance" class="section bg-light-gray">
+            <div class="container agency-content-wrapper">
+
+                <div class="agency-text">
+                    <h2>Customs Clearance</h2>
+                    <p>
+                        SAITRANS SHIPPING handles complete customs and statutory clearance procedures required
+                        for vessels transiting through Pamban. Our team ensures all documentation is processed
+                        accurately and submitted on time to avoid delays.
+                    </p>
+                    <p>
+                        We maintain strong coordination with customs, port, immigration, and other regulatory
+                        authorities, ensuring smooth approval processes. Our efficient handling reduces waiting
+                        time and ensures vessels receive timely clearance for entry and departure.
+                    </p>
+                </div>
+
+                <div class="about-image-column fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/Pamban_Bridge.jpg" alt="Customs Clearance">
+                        <div class="image-accent-box"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="towing-service" class="section">
+            <div class="container agency-content-wrapper">
+
+                <div class="about-image-column fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/Pamban.jpg" alt="Towing Service">
+                        <div class="image-accent-box"></div>
+                    </div>
+                </div>
+
+                <div class="agency-text">
+                    <h2>Towing Supporting Boat</h2>
+                    <p>
+                        Due to the restricted width and shallow depth of the Pamban channel, towing assistance
+                        is often essential for safe vessel maneuvering. SAITRANS SHIPPING provides reliable and
+                        well-equipped towing boats to support vessel movement.
+                    </p>
+                    <p>
+                        Our towing services ensure precise handling during transit, especially in challenging
+                        conditions such as strong currents or limited visibility. We prioritize safety and
+                        operational efficiency at every stage.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="water-bunkering" class="section bg-light-gray">
+            <div class="container agency-content-wrapper">
+
+                <div class="agency-text">
+                    <h2>Water Bunkering</h2>
+                    <p>
+                        SAITRANS SHIPPING provides dependable fresh water supply services for vessels at
+                        anchorage and transit points near Pamban. We ensure timely delivery of clean and
+                        quality water to meet operational and crew requirements.
+                    </p>
+                    <p>
+                        Our team coordinates closely with vessel schedules to ensure uninterrupted supply,
+                        helping vessels maintain efficiency during their journey.
+                    </p>
+                </div>
+
+                <div class="about-image-column fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/Old_Pamban.jpg" alt="Water Bunkering">
+                        <div class="image-accent-box"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="diesel-bunkering" class="section">
+            <div class="container agency-content-wrapper">
+
+
+                <div class="about-image-column fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/old_pamban_bridge.jpg" alt="Diesel Bunkering">
+                        <div class="image-accent-box"></div>
+                    </div>
+                </div>
+
+                <div class="agency-text">
+                    <h2>Diesel Bunkering</h2>
+                    <p>
+                        We provide efficient and reliable diesel bunkering services to vessels operating
+                        in and around the Pamban region. Our fuel supply meets required marine standards,
+                        ensuring safe and uninterrupted vessel operations.
+                    </p>
+                    <p>
+                        With timely coordination and quality assurance, we help vessels avoid delays and
+                        maintain smooth operational continuity.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="provisions" class="section bg-light-gray">
+            <div class="container agency-content-wrapper">
+
+                <div class="agency-text">
+                    <h2>Provisions</h2>
+                    <p>
+                        SAITRANS SHIPPING ensures timely delivery of fresh provisions and essential supplies
+                        required for vessel crews. We supply high-quality food items, groceries, and ship stores
+                        based on client requirements.
+                    </p>
+                    <p>
+                        Our efficient supply chain and local sourcing capabilities enable us to deliver
+                        provisions quickly, ensuring crew comfort and uninterrupted onboard operations.
+                    </p>
+                </div>
+
+                <div class="about-image-column fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/Vertical_Lift.jpg" alt="Provisions">
+                        <div class="image-accent-box"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
     <!-- Quality Policy Section -->
     <section id="quality" class="section quality-modern-bg">
         <div class="container">
@@ -821,7 +1121,7 @@
                 <!-- Top Row: Registered & Pamban -->
                 <div class="locations-top-row">
                     <!-- Registered Office -->
-                    <div class="location-card featured fade-in-up">
+                    <!-- <div class="location-card featured fade-in-up">
                         <div class="card-header">
                             <i class="fa-solid fa-building"></i>
                             <h4>Registered Office</h4>
@@ -841,14 +1141,8 @@
                                     <i class="fa-solid fa-envelope"></i> karthikyeyan.s@saitransshipping.com
                                 </a>
 
-                                <!-- <a href="mailto:operations@saitransshipping.com?subject=Inquiry&body=Hello, I would like to know about your shipping services."
-                                    class="c-link">
-                                    <i class="fa-solid fa-envelope"></i> operations@saitransshipping.com
-                                </a> -->
-                                <!-- <a href="mailto:operations@saitransshipping.com" class="c-link"><i
-                                        class="fa-solid fa-envelope"></i> operations@saitransshipping.com</a> -->
-                                <!-- <a href="mailto:karthikyeyan.s@saitransshipping.com" class="c-link"><i
-                                        class="fa-solid fa-envelope"></i> karthikyeyan.s@saitransshipping.com</a> -->
+                         
+                                
                                 <a href="tel:04442072278" class="c-link"><i class="fa-solid fa-phone"></i> 044 -4207
                                     2278</a>
                                 <div class="mobile-row">
@@ -858,7 +1152,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Pamban Office -->
                     <div class="location-card featured fade-in-up delay-100">
@@ -878,54 +1172,20 @@
                                     target="_blank" class="c-link">
                                     <i class="fa-solid fa-envelope"></i> operations@saitransshipping.com
                                 </a>
+                                <div class="mobile-row">
+                                    <i class="fa-solid fa-mobile"></i>
+                                    <a href="tel:+918754750515">+91 8754750515</a>
+                                    <a href="tel:+919092811380">+91 9092811380</a>
+                                </div>
                                 <!-- <a href="mailto:operations@saitransshipping.com" class="c-link"><i
                                         class="fa-solid fa-envelope"></i> operations@saitransshipping.com</a> -->
-                                <a href="tel:+918754750515" class="c-link"><i class="fa-solid fa-mobile"></i> +91 87547
-                                    50515</a>
+                                <!-- <a href="tel:+918754750515" class="c-link"><i class="fa-solid fa-mobile"></i> +91 87547
+                                    50515</a> -->
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="locations-grid-small">
-
-                    <!-- Ennore -->
-                    <div class="location-card mini fade-in-up delay-100">
-                        <div class="card-header">
-                            <i class="fa-solid fa-ship"></i>
-                            <h4>Ennore / Kattupalli</h4>
-                        </div>
-                        <p>No.18, 3rd Main Road, <br>
-                            Athipattu Pudhu Nagar, <br>
-                            Ennore - 600 120.</p>
-                        <p class="small-contact"><strong>Mobile:</strong> +91 75024 35977</p>
-                    </div>
-
-                    <!-- Tuticorin -->
-                    <div class="location-card mini fade-in-up delay-200">
-                        <div class="card-header">
-                            <i class="fa-solid fa-water"></i>
-                            <h4>Tuticorin</h4>
-                        </div>
-                        <p>No.5/258, A6, <br>
-                            Mahanagar, Muthaipuram, <br>
-                            Tuticorin - 628 005.</p>
-                        <p class="small-contact"><strong>Mobile:</strong> +91 9171672323</p>
-                    </div>
-
-                    <!-- Karaikal -->
-                    <div class="location-card mini fade-in-up delay-200">
-                        <div class="card-header">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <h4>Karaikal</h4>
-                        </div>
-                        <p>No.142, Lakshmi Corner, <br>
-                            Ammalchattiram, <br>
-                            Nagore Main Road, <br>
-                            Karaikal - 609 602.</p>
-                        <p class="small-contact"><strong>Mobile:</strong> +91 9788563275</p>
-                    </div>
-                </div>
 
             </div>
         </div>
