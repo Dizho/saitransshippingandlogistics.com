@@ -1,14 +1,18 @@
 RewriteEngine On
 
-# 1. Redirect /filename.html to /filename (External Redirect, No Slash)
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [L,R=301]
+# 1. Redirect index.html to Root (External Redirect)
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [L,R=301]
 
-# 2. Internally serve /filename as /filename.html (Internal Mapping)
+# 2. Map /home to Root (Internal)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^home$ / [L]
+
+# 3. Handle pamban Ghost Redirect (Folder logic)
+# (Your Pamban page uses JS for fine-tuning the URL bar)
+# If pamban.html exists, treat as clean
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
-
-# 3. Handle index specifically - redirect /index to root /
-RewriteRule ^index$ / [L,R=301]
